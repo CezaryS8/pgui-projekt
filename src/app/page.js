@@ -1,16 +1,42 @@
-import Image from 'next/image'
-import styles from './page.module.css'
-import Button from '@mui/material/Button';
-import CardTest from '../../components/CardTest';
+import React from "react";
+import { Grid, Paper } from "@mui/material";
 
-export default function Home() {
+import OrdersWidget from "./../../components/OrdersWidget/OrdersWidget";
+import Sidebar from "./../../components/Sidebar/Sidebar";
+import Navbar from "./../../components/Navbar/Navbar";
+// import SalesChartWidget from "./../../components/SalesChartWidget/SalesChartWidget";
+// import QualityWidget from "./../../components/QualityWidget/QualityWidget";
+// import RankingWidget from "./../../components/RankingWidget/RankingWidget";
+// import ReviewsWidget from "./../../components/ReviewsWidget/ReviewsWidget";
+// import SalesTipsWidget from "./../../components/SalesTipsWidget/SalesTipsWidget";
+// import OrdersWidgetChat from "./../../components/OrdersWidgetChat";
+
+const Dashboard = () => {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        siema
-        <Button variant="contained">Hello world</Button>
-        <CardTest />
+    <div>
+      <div className=" max-w-screen-xl w-full mx-auto">
+        <Sidebar />
+        <div className="grid grid-cols-12 auto-rows-max gap-5 ">
+          <div className="col-span-12">
+            <Navbar />
+          </div>
+
+          <div className="col-span-4">
+            <OrdersWidget />
+          </div>
+          <div className="col-span-8">
+            <OrdersWidget />
+          </div>
+          <div className="col-span-4">
+            <OrdersWidget />
+          </div>
+          <div className="col-span-8">
+            <OrdersWidget />
+          </div>
+        </div>
       </div>
-    </main>
-  )
-}
+    </div>
+  );
+};
+
+export default Dashboard;
