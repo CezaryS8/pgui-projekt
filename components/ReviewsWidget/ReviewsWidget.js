@@ -77,10 +77,10 @@ const ReviewsWidget = () => {
                 <div hidden={!(selectedCategory === positive)} >
                     <Paper elevation={0} sx={{ padding: "10px", marginBottom: "15px" }}>
                         <Review product="Laptop Apple MacBook AIR 13" review={4} date="15.01.2024" />
-                        <Review product="HyperX Alloy Origins Mechaniczna" review={5} date="01.01.2024" />
-                        <Review product="Logitech G203 LightSync Gaming Mouse" review={5} date="12.12.2023" />
                         <Review product="iPhone 12 Pro 128GB Graphite" review={4} date="10.12.2023" />
+                        <Review product="HyperX Alloy Origins Mechaniczna" review={5} date="01.01.2024" />
                         <Review product="Laptop Apple MacBook AIR 13" review={4} date="15.01.2024" />
+                        <Review product="Logitech G203 LightSync Gaming Mouse" review={5} date="12.12.2023" />
                     </Paper>
                 </div>
                 <div hidden={!(selectedCategory === negative)} >
