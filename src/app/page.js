@@ -6,6 +6,7 @@ import Sidebar from "./../../components/Sidebar/Sidebar";
 import Navbar from "./../../components/Navbar/Navbar";
 import QualityWidget from "../../components/QualityWidget/QualityWidget";
 import ReviewsWidget from "../../components/ReviewsWidget/ReviewsWidget";
+import SalesTipsWidget from "../../components/SalesTipsWidget/SalesTipsWidget";
 // import SalesChartWidget from "./../../components/SalesChartWidget/SalesChartWidget";
 // import QualityWidget from "./../../components/QualityWidget/QualityWidget";
 // import RankingWidget from "./../../components/RankingWidget/RankingWidget";
@@ -33,7 +34,7 @@ const Dashboard = () => {
             <ReviewsWidget />
           </div>
           <div className="col-span-8">
-            <OrdersWidget />
+            <SalesTipsWidget />
           </div>
         </div>
       </div>
