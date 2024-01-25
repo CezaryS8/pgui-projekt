@@ -11,7 +11,7 @@ import { Paper } from "@mui/material";
 const SalesTipsWidget = () => {
     return (
         <Card>
-            <CardContent  style={{ display: "flex", width: "800px", justifyContent: "center" }}>
+            <CardContent  style={{ display: "flex", width: "800px"}}>
                 <Typography variant="h5" component="div" sx={{ fontWeight: "bold" }}>
                     Porady sprzedażowe
                 </Typography>
@@ -30,7 +30,7 @@ const SalesTipsWidget = () => {
                             Segmentacja klientów
                         </Typography>
                         <Typography variant="h7" component="div" sx={{ marginTop: "5px", textAlign: "center"  }}>
-                            Sperzonalizowane treści
+                            Spersonalizowane treści
                         </Typography>
                     </div>
                 </div>
