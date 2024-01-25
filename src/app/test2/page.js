@@ -12,17 +12,114 @@ import SalesChartWidget from "../../../components/SalesChartWidget/SalesChartWid
 // import ReviewsWidget from "./../../components/ReviewsWidget/ReviewsWidget";
 // import SalesTipsWidget from "./../../components/SalesTipsWidget/SalesTipsWidget";
 // import OrdersWidgetChat from "./../../components/OrdersWidgetChat";
+import { Box, Button, IconButton, Typography, useTheme } from "@mui/material";
+import RankingWidget from "../../../components/RankingWidget/RankingWidget";
 
 const Dashboard = () => {
   return (
-    <div>
-      <Grid container justifyContent="center" spacing={2}>
-        <Grid item xs={12} sm={6} md={4}>
-          <OrdersWidget />
-          <br />
-          <SalesChartWidget />
-        </Grid>
-      </Grid>
+    <div className="flex">
+      <Sidebar />
+      <div style={{ width: "100%" }}>
+        <Box m="2px">
+          {/* HEADER */}
+          <Navbar />
+
+          {/* GRID & CHARTS */}
+          <Box
+            display="grid"
+            gridTemplateColumns="repeat(12, 1fr)"
+            gridAutoRows="94px"
+            gap="2px"
+          >
+            {/* ROW 1 */}
+            <Box
+              gridColumn="span 3"
+              gridRow="1 / 2"
+              backgroundColor="#7247CC45"
+              display="flex"
+              alignItems="center"
+              justifyContent="center"
+            >
+              1a
+            </Box>
+            <Box
+              gridColumn="span 3"
+              gridRow="2 / 4"
+              backgroundColor="#7247CC45"
+              display="flex"
+              alignItems="center"
+              justifyContent="center"
+            >
+              <OrdersWidget />
+            </Box>
+            <Box
+              gridColumn="span 3"
+              gridRow="4 / 8"
+              backgroundColor="#7247CC45"
+              display="flex"
+              alignItems="center"
+              justifyContent="center"
+            >
+              1c
+            </Box>
+            {/* 2a and 2b in the same column */}
+            <Box
+              gridColumn="span 9"
+              gridRow="1 / span 7"
+              backgroundColor="#7247CC45"
+              display="flex"
+              flexDirection="column"
+            >
+              <Box
+                flexGrow={4} // Increase the flexGrow for 2a to make it taller
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+                borderBottom="2px solid #FFF" // Optional: visually separate 2a and 2b
+              >
+                <SalesChartWidget />
+              </Box>
+              <Box
+                flexGrow={3} // Keep the flexGrow for 2b lower than 2a
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+              >
+                <RankingWidget />
+              </Box>
+            </Box>
+
+            {/* ROW 2 */}
+            <Box
+              gridColumn="span 5"
+              gridRow="span 2"
+              backgroundColor="#7247CC45"
+            >
+              <Typography
+                variant="h5"
+                fontWeight="600"
+                sx={{ padding: "30px 30px 0 30px" }}
+              >
+                3
+              </Typography>
+            </Box>
+            <Box
+              gridColumn="span 7"
+              gridRow="span 2"
+              backgroundColor="#7247CC45"
+              padding="30px"
+            >
+              <Typography
+                variant="h5"
+                fontWeight="600"
+                sx={{ marginBottom: "15px" }}
+              >
+                4
+              </Typography>
+            </Box>
+          </Box>
+        </Box>
+      </div>
     </div>
   );
 };

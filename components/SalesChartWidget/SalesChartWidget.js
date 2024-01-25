@@ -56,7 +56,7 @@ const SalesChartWidget = () => {
     textAlign: "left",
   };
   return (
-    <Card>
+    <Card sx={{ width: "100%", height: "100%" }}>
       <CardContent>
         <Typography
           display="inline"
@@ -88,14 +88,14 @@ const SalesChartWidget = () => {
         </Grid>
 
         <LineChart
-          width={550}
+          width={1150}
           height={300}
           data={data}
           margin={{
-            top: 35,
-            right: 30,
-            left: 20,
-            bottom: 5,
+            top: 30,
+            right: 0,
+            left: 0,
+            bottom: 0,
           }}
         >
           <XAxis dataKey="name" />
