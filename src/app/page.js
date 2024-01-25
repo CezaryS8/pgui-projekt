@@ -4,8 +4,6 @@ import { Grid, Paper } from "@mui/material";
 import OrdersWidget from "./../../components/OrdersWidget/OrdersWidget";
 import Sidebar from "./../../components/Sidebar/Sidebar";
 import Navbar from "./../../components/Navbar/Navbar";
-import QualityWidget from "../../components/QualityWidget/QualityWidget";
-import ReviewsWidget from "../../components/ReviewsWidget/ReviewsWidget";
 // import SalesChartWidget from "./../../components/SalesChartWidget/SalesChartWidget";
 // import QualityWidget from "./../../components/QualityWidget/QualityWidget";
 // import RankingWidget from "./../../components/RankingWidget/RankingWidget";
@@ -27,10 +25,10 @@ const Dashboard = () => {
             <OrdersWidget />
           </div>
           <div className="col-span-8">
-            <QualityWidget />
+            <OrdersWidget />
           </div>
           <div className="col-span-4">
-            <ReviewsWidget />
+            <OrdersWidget />
           </div>
           <div className="col-span-8">
             <OrdersWidget />
