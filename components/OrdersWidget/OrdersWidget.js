@@ -2,36 +2,51 @@ import React from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
-import Grid from "@mui/material/Grid";
+import Box from "@mui/material/Box";
 
 const OrdersWidget = () => {
+  const textStyle = {
+    fontFamily: "Poppins",
+    fontSize: "14px",
+    fontWeight: 600,
+    lineHeight: "22px",
+    letterSpacing: "0px",
+    textAlign: "left",
+  };
+
+  const OrderItem = ({ label, value }) => (
+    <Box sx={{ display: "flex", justifyContent: "space-between", mt: 2 }}>
+      <Typography sx={textStyle}>{label}</Typography>
+      <Typography sx={textStyle}>{value}</Typography>
+    </Box>
+  );
+
   return (
-    // <Grid container justifyContent="center" spacing={2}>
-    //   <Grid item xs={12} sm={6} md={4}>
     <Card>
       <CardContent>
-        <Typography variant="h5" component="div">
+        <Typography
+          variant="h5"
+          sx={{
+            ...textStyle,
+            fontWeight: 700,
+            fontSize: "18px",
+            lineHeight: "28px",
+            mb: 2,
+          }}
+        >
           Zamówienia
+          <img
+            className="w-[18px] relative h-[18px] pl-2"
+            alt=""
+            src="feathericon--alertcircle.svg"
+          />
         </Typography>
-        <Typography variant="body2">
-          Nieopłacone
-          <br />
-          {"63"}
-        </Typography>
-        <Typography variant="body2">
-          Niewysłane
-          <br />
-          {"532"}
-        </Typography>
-        <Typography variant="body2">
-          Zwroty
-          <br />
-          {"22"}
-        </Typography>
+
+        <OrderItem label="Nieopłacone" value="63" />
+        <OrderItem label="Niewysłane" value="532" />
+        <OrderItem label="Zwroty" value="22" />
       </CardContent>
     </Card>
-    //   </Grid>
-    // </Grid>
   );
 };
 

@@ -28,10 +28,10 @@ const Dashboard = () => {
             <OrdersWidget />
           </div>
           <div className="col-span-8">
-            <QualityWidget />
+            <OrdersWidget />
           </div>
           <div className="col-span-4">
-            <ReviewsWidget />
+            <OrdersWidget />
           </div>
           <div className="col-span-8">
             <SalesTipsWidget />
