@@ -7,6 +7,8 @@ import Navbar from "./../../components/Navbar/Navbar";
 import QualityWidget from "../../components/QualityWidget/QualityWidget";
 import ReviewsWidget from "../../components/ReviewsWidget/ReviewsWidget";
 import SalesTipsWidget from "../../components/SalesTipsWidget/SalesTipsWidget";
+import SalesChartWidget from "../../components/SalesChartWidget/SalesChartWidget";
+import RankingWidget from "../../components/RankingWidget/RankingWidget";
 // import SalesChartWidget from "./../../components/SalesChartWidget/SalesChartWidget";
 // import QualityWidget from "./../../components/QualityWidget/QualityWidget";
 // import RankingWidget from "./../../components/RankingWidget/RankingWidget";
@@ -16,30 +18,34 @@ import SalesTipsWidget from "../../components/SalesTipsWidget/SalesTipsWidget";
 
 const Dashboard = () => {
   return (
-    <div>
-      <div className=" max-w-screen-xl w-full mx-auto">
-        <Sidebar />
-        <div className="grid grid-cols-12 auto-rows-max gap-5 ">
-          <div className="col-span-12">
-            <Navbar />
-          </div>
-
-          <div className="col-span-4">
+    <div className="flex">
+      <Sidebar />
+      <div style={{ width: "100%" }}>
+        <Navbar />
+        <div>
+          <div>
             <OrdersWidget />
           </div>
-          <div className="col-span-8">
-            <OrdersWidget />
+          <div>
+            <QualityWidget />
           </div>
-          <div className="col-span-4">
-            <OrdersWidget />
+          <div>
+            <ReviewsWidget />
           </div>
-          <div className="col-span-8">
+          <div>
+            <SalesChartWidget />
+          </div>
+          <div>
+            <RankingWidget />
+          </div>
+          <div>
             <SalesTipsWidget />
           </div>
         </div>
       </div>
     </div>
   );
+
 };
 
 export default Dashboard;
