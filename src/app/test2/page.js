@@ -71,16 +71,16 @@ const Dashboard = () => {
               flexDirection="column"
             >
               <Box
-                flexGrow={4} // Increase the flexGrow for 2a to make it taller
+                flexGrow={4}
                 display="flex"
                 alignItems="center"
                 justifyContent="center"
-                borderBottom="2px solid #FFF" // Optional: visually separate 2a and 2b
+                borderBottom="2px solid #FFF"
               >
                 <SalesChartWidget />
               </Box>
               <Box
-                flexGrow={3} // Keep the flexGrow for 2b lower than 2a
+                flexGrow={3}
                 display="flex"
                 alignItems="center"
                 justifyContent="center"
@@ -95,13 +95,7 @@ const Dashboard = () => {
               gridRow="span 2"
               backgroundColor="#7247CC45"
             >
-              <Typography
-                variant="h5"
-                fontWeight="600"
-                sx={{ padding: "30px 30px 0 30px" }}
-              >
-                3
-              </Typography>
+              <ReviewsWidget />
             </Box>
             <Box
               gridColumn="span 7"
