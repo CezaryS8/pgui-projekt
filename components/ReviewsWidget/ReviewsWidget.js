@@ -17,10 +17,6 @@ const ReviewsWidget = () => {
     const negative = "negative";
 
     const [selectedCategory, setSelectedCategory] = useState(all);
-    
-    const hiddenDiv = {
-        display: "none",
-    };
 
     const textStyle = {
         fontFamily: "Poppins",
