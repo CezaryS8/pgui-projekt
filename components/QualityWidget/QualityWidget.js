@@ -15,7 +15,7 @@ const CustomBox = styled(Box)(({ theme }) => ({
   },
 }));
 
-const WidgetJakoSprzeday = () => {
+const QualityWidget = () => {
   return (
     <CustomBox>
       <Stack spacing={2}>
@@ -76,4 +76,4 @@ const WidgetJakoSprzeday = () => {
   );
 };
 
-export default WidgetJakoSprzeday;
+export default QualityWidget;
