@@ -14,6 +14,7 @@ import SalesChartWidget from "../../../components/SalesChartWidget/SalesChartWid
 // import OrdersWidgetChat from "./../../components/OrdersWidgetChat";
 import { Box, Button, IconButton, Typography, useTheme } from "@mui/material";
 import RankingWidget from "../../../components/RankingWidget/RankingWidget";
+import SalesTipsWidget from "../../../components/SalesTipsWidget/SalesTipsWidget";
 
 const Dashboard = () => {
   return (
@@ -60,7 +61,7 @@ const Dashboard = () => {
               alignItems="center"
               justifyContent="center"
             >
-              1c
+              <QualityWidget />
             </Box>
             {/* 2a and 2b in the same column */}
             <Box
@@ -101,15 +102,8 @@ const Dashboard = () => {
               gridColumn="span 7"
               gridRow="span 2"
               backgroundColor="#7247CC45"
-              padding="30px"
             >
-              <Typography
-                variant="h5"
-                fontWeight="600"
-                sx={{ marginBottom: "15px" }}
-              >
-                4
-              </Typography>
+              <SalesTipsWidget />
             </Box>
           </Box>
         </Box>
