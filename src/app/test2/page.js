@@ -18,8 +18,8 @@ const Dashboard = () => {
     <div>
       <Grid container justifyContent="center" spacing={2}>
         <Grid item xs={12} sm={6} md={4}>
-          <ReviewsWidget />
           <OrdersWidget />
+          <br />
           <SalesChartWidget />
         </Grid>
       </Grid>
