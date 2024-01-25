@@ -22,7 +22,7 @@ const OrdersWidget = () => {
   );
 
   return (
-    <Card>
+    <Card sx={{ width: "100%", height: "100%" }}>
       <CardContent>
         <Typography
           variant="h5"
