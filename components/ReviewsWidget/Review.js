@@ -7,7 +7,6 @@ import DateDisplay from "./../commons/DateDisplay";
 const Review = ({ product, review, date }) => {
     const textStyle = {
         fontFamily: "Poppins",
-        fontSize: "14px",
         fontWeight: 600,
         lineHeight: "22px",
         letterSpacing: "0px",
