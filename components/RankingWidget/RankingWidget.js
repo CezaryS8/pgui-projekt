@@ -1,10 +1,8 @@
 "use client";
 
-import { Card, CardContent, Typography, Grid, Paper } from "@mui/material";
+import { Card, CardContent, Typography, Grid } from "@mui/material";
 import React from "react";
 import CategorySelector from "../commons/CategorySelector";
-
-import Order from "./RankingTable/Order";
 import RankingTable from "./RankingTable/RankingTable";
 
 const RankingWidget = () => {
@@ -26,16 +24,35 @@ const RankingWidget = () => {
       <CardContent>
         <div
           style={{
-            display: "flex",
-            alignItems: "center",
             marginBottom: "15px",
           }}
         >
-          <Typography variant="h5" sx={{ fontWeight: "bold", width: "25%" }}>
+          <Typography
+            display="inline"
+            variant="h5"
+            sx={{
+              ...textStyle,
+              fontWeight: 700,
+              fontSize: "18px",
+              lineHeight: "28px",
+              mb: 2,
+            }}
+          >
             Ranking ofert
+            <img
+              className="w-[18px] relative h-[18px] pl-2"
+              alt=""
+              src="feathericon--alertcircle.svg"
+            />
           </Typography>
-          <Grid container spacing={2}>
-            <Grid item xs={2} onClick={() => setSelectedCategory(most)}>
+          <Grid spacing={2} display="inline">
+            <Grid
+              item
+              xs={4}
+              display="inline"
+              pl={2}
+              onClick={() => setSelectedCategory(most)}
+            >
               <CategorySelector
                 isSelected={selectedCategory === most}
                 cx={textStyle}
@@ -45,9 +62,10 @@ const RankingWidget = () => {
             </Grid>
             <Grid
               item
-              xs={2}
+              xs={4}
+              display="inline"
+              pl={2}
               onClick={() => setSelectedCategory(least)}
-              cx={textStyle}
             >
               <CategorySelector isSelected={selectedCategory === least}>
                 Najrzadziej kupowane

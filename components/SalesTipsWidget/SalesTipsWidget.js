@@ -17,11 +17,22 @@ const SalesTipsWidget = () => {
     <Card sx={{ width: "100%", height: "100%" }}>
       <CardContent style={{ display: "flex", width: "800px" }}>
         <Typography
+          display="inline"
           variant="h5"
-          component="div"
-          sx={{ ...textStyle, fontWeight: "bold" }}
+          sx={{
+            ...textStyle,
+            fontWeight: 700,
+            fontSize: "18px",
+            lineHeight: "28px",
+            mb: 2,
+          }}
         >
           Porady sprzedażowe
+          <img
+            className="w-[18px] relative h-[18px] pl-2"
+            alt=""
+            src="feathericon--alertcircle.svg"
+          />
         </Typography>
         <div
           style={{
