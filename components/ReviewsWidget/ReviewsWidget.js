@@ -12,12 +12,6 @@ import { Paper } from "@mui/material";
 import Review from "./Review";
 
 const ReviewsWidget = () => {
-  const all = "all";
-  const positive = "positive";
-  const negative = "negative";
-
-  const [selectedCategory, setSelectedCategory] = useState(all);
-
   const textStyle = {
     fontFamily: "Poppins",
     fontSize: "14px",
@@ -28,7 +22,7 @@ const ReviewsWidget = () => {
   };
 
   return (
-    <Card>
+    <Card sx={{ width: "100%", height: "100%" }}>
       <CardContent>
         <div
           style={{
@@ -44,110 +38,44 @@ const ReviewsWidget = () => {
             Opinie kupujących
           </Typography>
           <Grid container spacing={2}>
-            <Grid item xs={1} onClick={() => setSelectedCategory(all)}>
-              <CategorySelector isSelected={selectedCategory === all}>
-                Wszystkie
-              </CategorySelector>
+            <Grid item xs={0.9}>
+              <CategorySelector isSelected={true}>Wszystkie</CategorySelector>
             </Grid>
-            <Grid item xs={1} onClick={() => setSelectedCategory(positive)}>
-              <CategorySelector isSelected={selectedCategory === positive}>
-                Pozytywne
-              </CategorySelector>
+            <Grid item xs={0.9}>
+              <CategorySelector isSelected={false}>Pozytywne</CategorySelector>
             </Grid>
-            <Grid item xs={1} onClick={() => setSelectedCategory(negative)}>
-              <CategorySelector isSelected={selectedCategory === negative}>
-                Negatywne
-              </CategorySelector>
+            <Grid item xs={0.9}>
+              <CategorySelector isSelected={false}>Negatywne</CategorySelector>
             </Grid>
           </Grid>
         </div>
-        <div hidden={!(selectedCategory === all)}>
-          <Paper elevation={0} sx={{ padding: "10px", marginBottom: "15px" }}>
-            <Review
-              product="Laptop Apple MacBook AIR 13"
-              review={4}
-              date="15.01.2024"
-            />
-            <Review
-              product="HyperX Alloy Origins Mechaniczna"
-              review={5}
-              date="01.01.2024"
-            />
-            <Review
-              product="Logitech G203 LightSync Gaming Mouse"
-              review={4}
-              date="12.12.2023"
-            />
-            <Review
-              product="iPhone 12 Pro 128GB Graphite"
-              review={1}
-              date="10.12.2023"
-            />
-            <Review
-              product="Laptop Apple MacBook AIR 13"
-              review={4}
-              date="15.01.2024"
-            />
-          </Paper>
-        </div>
-        <div hidden={!(selectedCategory === positive)}>
-          <Paper elevation={0} sx={{ padding: "10px", marginBottom: "15px" }}>
-            <Review
-              product="Laptop Apple MacBook AIR 13"
-              review={4}
-              date="15.01.2024"
-            />
-            <Review
-              product="iPhone 12 Pro 128GB Graphite"
-              review={4}
-              date="10.12.2023"
-            />
-            <Review
-              product="HyperX Alloy Origins Mechaniczna"
-              review={5}
-              date="01.01.2024"
-            />
-            <Review
-              product="Laptop Apple MacBook AIR 13"
-              review={4}
-              date="15.01.2024"
-            />
-            <Review
-              product="Logitech G203 LightSync Gaming Mouse"
-              review={5}
-              date="12.12.2023"
-            />
-          </Paper>
-        </div>
-        <div hidden={!(selectedCategory === negative)}>
-          <Paper elevation={0} sx={{ padding: "10px", marginBottom: "15px" }}>
-            <Review
-              product="Laptop Apple MacBook AIR 13"
-              review={1}
-              date="15.01.2024"
-            />
-            <Review
-              product="HyperX Alloy Origins Mechaniczna"
-              review={2}
-              date="01.01.2024"
-            />
-            <Review
-              product="iPhone 12 Pro 128GB Graphite"
-              review={1}
-              date="10.12.2023"
-            />
-            <Review
-              product="Laptop Apple MacBook AIR 13"
-              review={1}
-              date="15.01.2024"
-            />
-            <Review
-              product="Logitech G203 LightSync Gaming Mouse"
-              review={1}
-              date="12.12.2023"
-            />
-          </Paper>
-        </div>
+        <Paper elevation={0} sx={{ padding: "10px", marginBottom: "15px" }}>
+          <Review
+            product="Laptop Apple MacBook AIR 13"
+            review={4}
+            date="15.01.2024"
+          />
+          <Review
+            product="HyperX Alloy Origins Mechaniczna"
+            review={5}
+            date="01.01.2024"
+          />
+          <Review
+            product="Logitech G203 LightSync Gaming Mouse"
+            review={4}
+            date="12.12.2023"
+          />
+          <Review
+            product="iPhone 12 Pro 128GB Graphite"
+            review={3}
+            date="10.12.2023"
+          />
+          <Review
+            product="Laptop Apple MacBook AIR 13"
+            review={4}
+            date="15.01.2024"
+          />
+        </Paper>
       </CardContent>
     </Card>
   );
