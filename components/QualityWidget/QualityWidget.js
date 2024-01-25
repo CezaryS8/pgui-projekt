@@ -17,7 +17,7 @@ const CustomBox = styled(Box)(({ theme }) => ({
 
 const QualityWidget = () => {
   return (
-    <CustomBox>
+    <CustomBox sx={{ width: "100%", height: "100%" }}>
       <Stack spacing={2}>
         <Stack
           direction="row"
