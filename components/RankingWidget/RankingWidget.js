@@ -2,7 +2,6 @@ import { Card, CardContent, Typography, Grid, Paper } from "@mui/material";
 import React from "react";
 import CategorySelector from "../commons/CategorySelector";
 
-import laptop_icon from "../../public/laptop-icon.png";
 import Order from "./RankingTable/Order";
 import RankingTable from "./RankingTable/RankingTable";
 
