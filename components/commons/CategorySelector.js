@@ -13,7 +13,7 @@ const CategorySelector = ({ isSelected, children }) => {
   };
 
   return (
-    <Typography variant="body2" style={categoryStyle}>
+    <Typography display="inline" variant="body2" style={categoryStyle}>
       {children}
     </Typography>
   );
