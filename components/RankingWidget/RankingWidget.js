@@ -12,6 +12,7 @@ const RankingWidget = () => {
     lineHeight: "22px",
     letterSpacing: "0px",
     textAlign: "left",
+    fontSize: "14px",
   };
 
   const most = "most";
@@ -40,13 +41,13 @@ const RankingWidget = () => {
           >
             Ranking ofert
             <div className="tooltip">
-            <img
-              className="w-[18px] relative h-[18px] pl-2"
-              alt=""
-              src="feathericon--alertcircle.svg"
-            />
-            <span className="tooltiptext">
-              Lista 5 najlepiej i najgorzej sprzedających się ofert
+              <img
+                className="w-[18px] relative h-[18px] pl-2"
+                alt=""
+                src="feathericon--alertcircle.svg"
+              />
+              <span className="tooltiptext">
+                Lista 5 najlepiej i najgorzej sprzedających się ofert
               </span>
             </div>
           </Typography>

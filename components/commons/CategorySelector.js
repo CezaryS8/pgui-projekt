@@ -3,9 +3,9 @@ import Typography from "@mui/material/Typography";
 
 const CategorySelector = ({ isSelected, children }) => {
   const categoryStyle = {
-    fontSize: "0.875rem",
-    color: isSelected ? "#6200ea" : "rgba(0, 0, 0, 0.54)",
-    fontWeight: isSelected ? 600 : 400,
+    fontSize: "14px",
+    color: isSelected ? "#7459D9" : "#D0D1D2",
+    fontWeight: isSelected ? 600 : 600,
     cursor: "pointer",
     "&:hover": {
       color: "#6200ea",

@@ -5,109 +5,129 @@ const RankingTable = ({ category }) => {
   const textStyle = {
     fontFamily: "Poppins",
     fontSize: "14px",
-    fontWeight: 600,
+    fontWeight: 400,
     lineHeight: "22px",
     letterSpacing: "0px",
     textAlign: "left",
   };
 
-  const mostTable = (
+  const cellStyle = {
+    padding: "0 55px", // Adjust the padding to control the gap between columns
+    textAlign: "center", // Center the text
+  };
+
+  const headerCellStyle = {
+    ...cellStyle,
+    color: "#FBBC05",
+    fontFamily: "Poppins",
+    fontWeight: 600,
+    lineHeight: "22px",
+  };
+
+  const getTableBody = (orders) => (
     <tbody>
-      <tr style={textStyle}>
-        <td>
-          <Order name="Laptop Lenovo IdeaPad 3 15,6&ldquo;" fontWeight="bold" />
-        </td>
-        <td style={{ fontWeight: "bold" }}>12 534 sztuk</td>
-        <td style={{ fontWeight: "bold" }}>50 554 002 zł</td>
-      </tr>
-      <tr style={textStyle}>
-        <td>
-          <Order name="Laptop Apple MacBook Air 13&ldquo; M1 8GB 256GB" />
-        </td>
-        <td>12 001 sztuk</td>
-        <td>38 554 012 zł</td>
-      </tr>
-      <tr style={textStyle}>
-        <td>
-          <Order name="Laptop Samsung Galaxy Book Go 15,6&ldquo; 4GB 128GB" />
-        </td>
-        <td>9 000 sztuk</td>
-        <td>30 554 430 zł</td>
-      </tr>
-      <tr style={textStyle}>
-        <td>
-          <Order name="Laptop Lenovo Thinkpad E15 15,6&ldquo; 8GB 256GB" />
-        </td>
-        <td>8 021 sztuk</td>
-        <td>28 514 024 zł</td>
-      </tr>
-      <tr style={textStyle}>
-        <td>
-          <Order name="Laptop Lenovo Legion 5 Pro" />
-        </td>
-        <td>7 534 sztuk</td>
-        <td>25 554 002 zł</td>
-      </tr>
+      {orders.map((order, index) => (
+        <tr key={index} style={textStyle}>
+          <td>
+            <Order
+              name={order.name}
+              fontWeight={index === 0 ? "bold" : "normal"}
+            />
+          </td>
+          <td
+            style={{
+              ...cellStyle,
+              fontWeight: index === 0 ? "bold" : "normal",
+            }}
+          >
+            {order.quantity}
+          </td>
+          <td
+            style={{
+              ...cellStyle,
+              fontWeight: index === 0 ? "bold" : "normal",
+            }}
+          >
+            {order.amount}
+          </td>
+        </tr>
+      ))}
     </tbody>
   );
 
-  const leastTable = (
-    <tbody>
-      <tr>
-        <td>
-          <Order
-            name="Laptop Apple MacBook Air 13&ldquo; M1 8GB 256GB"
-            fontWeight="bold"
-          />
-        </td>
-        <td style={{ fontWeight: "bold" }}>301 sztuk</td>
-        <td style={{ fontWeight: "bold" }}>20 012 zł</td>
-      </tr>
-      <tr>
-        <td>
-          <Order name="Laptop Samsung Galaxy Book Go 15,6&ldquo; 4GB 128GB" />
-        </td>
-        <td>200 sztuk</td>
-        <td>20 430 zł</td>
-      </tr>
-      <tr>
-        <td>
-          <Order name="Laptop Lenovo IdeaPad 3 15,6&ldquo;" />
-        </td>
-        <td>514 sztuk</td>
-        <td>55 002 zł</td>
-      </tr>
-      <tr>
-        <td>
-          <Order name="Laptop Lenovo Legion 5 Pro" />
-        </td>
-        <td>1 201 sztuk</td>
-        <td>201 002 zł</td>
-      </tr>
-      <tr>
-        <td>
-          <Order name="Laptop Lenovo Thinkpad E15 15,6&ldquo; 8GB 256GB" />
-        </td>
-        <td>1 321 sztuk</td>
-        <td>224 024 zł</td>
-      </tr>
-    </tbody>
-  );
-
-  const table = category === "most" ? mostTable : leastTable;
+  const orders = category === "most" ? mostOrders : leastOrders; // Define your mostOrders and leastOrders arrays
+  const tableBody = getTableBody(orders);
 
   return (
     <table>
       <thead>
         <tr>
-          <th>{}</th>
-          <th style={{ color: "#FBBC05" }}>Sprzedanych sztuk</th>
-          <th style={{ color: "#FBBC05" }}>Obrót</th>
+          <th style={{ ...headerCellStyle, textAlign: "left" }}></th>
+          <th style={headerCellStyle}>Sprzedanych sztuk</th>
+          <th style={headerCellStyle}>Obrót</th>
         </tr>
       </thead>
-      {table}
+      {tableBody}
     </table>
   );
 };
 
 export default RankingTable;
+
+const mostOrders = [
+  {
+    name: "Laptop Lenovo IdeaPad 3 15,6",
+    quantity: "12 534 szt.",
+    amount: "50 554 002 zł",
+    fontWeight: "bold",
+  },
+  {
+    name: "Laptop Apple MacBook Air 13 M1 8GB 256GB",
+    quantity: "12 001 szt.",
+    amount: "38 554 012 zł",
+  },
+  {
+    name: "Laptop Samsung Galaxy Book Go 15 64GB 128GB",
+    quantity: "9 000 szt.",
+    amount: "30 554 430 zł",
+  },
+  {
+    name: "Laptop Lenovo Thinkpad E15 15,6 8GB 256GB",
+    quantity: "8 021 szt.",
+    amount: "28 514 024 zł",
+  },
+  {
+    name: "Laptop Lenovo Legion 5 Pro",
+    quantity: "7 534 szt.",
+    amount: "25 554 002 zł",
+  },
+];
+
+const leastOrders = [
+  {
+    name: "Laptop Apple MacBook Air 13 M1 8GB 256GB",
+    quantity: "301 szt.",
+    amount: "20 012 zł",
+    fontWeight: "bold",
+  },
+  {
+    name: "Laptop Samsung Galaxy Book Go 15,6 4GB 128GB",
+    quantity: "200 szt.",
+    amount: "20 430 zł",
+  },
+  {
+    name: "Laptop Lenovo IdeaPad 3 15,6",
+    quantity: "514 szt.",
+    amount: "55 002 zł",
+  },
+  {
+    name: "Laptop Lenovo Legion 5 Pro",
+    quantity: "1 201 szt.",
+    amount: "201 002 zł",
+  },
+  {
+    name: "Laptop Lenovo Thinkpad E15 15,6 8GB 256GB",
+    quantity: "1 321 szt.",
+    amount: "224 024 zł",
+  },
+];
