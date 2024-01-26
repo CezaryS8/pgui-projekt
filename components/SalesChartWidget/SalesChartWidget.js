@@ -6,6 +6,7 @@ import Typography from "@mui/material/Typography";
 import CategorySelector from "../commons/CategorySelector";
 import Grid from "@mui/material/Grid";
 import { LineChart, Line, XAxis, YAxis, Tooltip } from "recharts";
+import Chart from "./Chart";
 
 const data = [
   {
@@ -67,7 +68,7 @@ const data2 = [
     name: "nd",
     uv: 18000,
   },
-]
+];
 
 const SalesChartWidget = () => {
   const textStyle = {
@@ -80,10 +81,10 @@ const SalesChartWidget = () => {
   };
 
   const minValue = Math.min(...data.map((item) => item.uv));
-  
+
   const obrot = "obrot";
   const liczbaSztuk = "liczbaSztuk";
-  
+
   const [selectedCategory, setSelectedCategory] = React.useState(obrot);
 
   return (
@@ -114,32 +115,34 @@ const SalesChartWidget = () => {
           </div>
         </Typography>
         <Grid spacing={2} display="inline">
-          <Grid item xs={4} display="inline" pl={2} onClick={() => setSelectedCategory(obrot)}>
-            <CategorySelector isSelected={selectedCategory === obrot}>Obrót</CategorySelector>
+          <Grid
+            item
+            xs={4}
+            display="inline"
+            pl={2}
+            onClick={() => setSelectedCategory(obrot)}
+          >
+            <CategorySelector isSelected={selectedCategory === obrot}>
+              Obrót
+            </CategorySelector>
           </Grid>
-          <Grid item xs={4} display="inline" pl={2} onClick={() => setSelectedCategory(liczbaSztuk)}>
+          <Grid
+            item
+            xs={4}
+            display="inline"
+            pl={2}
+            onClick={() => setSelectedCategory(liczbaSztuk)}
+          >
             <CategorySelector isSelected={selectedCategory === liczbaSztuk}>
               Liczba sprzedanych sztuk
             </CategorySelector>
           </Grid>
         </Grid>
 
-        <LineChart
-          width={1150}
-          height={300}
-          data={selectedCategory === 'obrot' ? data : data2}
-          margin={{
-            top: 30,
-            right: 0,
-            left: 0,
-            bottom: 0,
-          }}
-        >
-          <XAxis dataKey="name" />
-          <YAxis domain={[minValue - minValue / 20, "auto"]} />
-          <Tooltip />
-          <Line type="monotone" dataKey="uv" stroke="#8884d8" strokeWidth={2} />
-        </LineChart>
+        <Chart
+          data={selectedCategory === "obrot" ? data : data2}
+          minValue={minValue}
+        />
       </CardContent>
     </Card>
   );
