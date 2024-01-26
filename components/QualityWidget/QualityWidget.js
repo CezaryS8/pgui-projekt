@@ -81,12 +81,13 @@ export default function CustomCard() {
           }}
         >
           Jakość sprzedaży
+          <div className="tooltip">
           <img
-            className="w-[18px] relative h-[18px] pl-2"
+            className="w-[18px] relative h-[18px] pl-2 tooltip"
             alt=""
             src="feathericon--alertcircle.svg"
-            title="Ocena sprzedaży biorąca pod uwagę różne aspekty."
-          />
+          /><span className="tooltiptext">Ocena sprzedaży biorąca pod uwagę różne aspekty</span>
+          </div>
         </Typography>
 
         <ScoreTypography variant="h1" component="div">
