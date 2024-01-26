@@ -16,12 +16,10 @@ const Dashboard = () => {
       <Sidebar />
       <div style={{ width: "100%" }}>
         <Box backgroundColor="#D0D1D2">
-          {/* HEADER */}
           <Box gridColumn="span 12" gridRow="span 1" px="2px">
             <Navbar />
           </Box>
 
-          {/* GRID & CHARTS */}
           <Box
             display="grid"
             gridTemplateColumns="repeat(12, 1fr)"
@@ -30,7 +28,6 @@ const Dashboard = () => {
             p="2px"
             backgroundColor="#D0D1D2"
           >
-            {/* ROW 1 */}
             <Box
               gridColumn="span 3"
               gridRow="1 / 2"
@@ -61,7 +58,6 @@ const Dashboard = () => {
             >
               <QualityWidget />
             </Box>
-            {/* 2a and 2b in the same column */}
             <Box
               gridColumn="span 9"
               gridRow="1 / span 7"
@@ -88,7 +84,6 @@ const Dashboard = () => {
               </Box>
             </Box>
 
-            {/* ROW 2 */}
             <Box
               gridColumn="span 5"
               gridRow="span 2"

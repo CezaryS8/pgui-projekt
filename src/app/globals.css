@@ -24,10 +24,11 @@ body {
 .tooltip .tooltiptext {
   visibility: hidden;
   width: 120px;
-  background-color: black;
-  color: #fff;
+  background-color: white;
+  color: black;
+  border: 1px solid #e5e7eb;
   text-align: center;
-  padding: 5px 0;
+  padding: 15px;
   border-radius: 6px;
   font-family: "Poppins";
   font-weight: 600;
