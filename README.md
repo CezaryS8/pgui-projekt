@@ -12,7 +12,7 @@ npm run dev
 ![image](https://github.com/WojciechSzade/pgui-projekt/assets/46067911/a41aef64-4498-4bdf-95d9-aa474d628bfa)
 
 ## Authors
-https://github.com/CezaryS8
+https://github.com/CezaryS8 <br>
 https://github.com/WojciechSzade
 
 ## Figma
