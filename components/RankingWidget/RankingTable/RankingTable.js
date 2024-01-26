@@ -18,6 +18,7 @@ const RankingTable = ({ category }) => {
 
   const headerCellStyle = {
     ...cellStyle,
+    fontSize: "14px",
     color: "#FBBC05",
     fontFamily: "Poppins",
     fontWeight: 600,

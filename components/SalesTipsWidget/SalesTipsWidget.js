@@ -11,6 +11,7 @@ const SalesTipsWidget = () => {
     lineHeight: "22px",
     letterSpacing: "0px",
     textAlign: "left",
+    fontSize: "14px",
   };
 
   return (
@@ -21,7 +22,9 @@ const SalesTipsWidget = () => {
         borderRadius: "0px",
       }}
     >
-      <CardContent style={{ display: "flex", width: "800px" }}>
+      <CardContent
+        style={{ display: "flex", flexDirection: "column", height: "100%" }}
+      >
         <Typography
           display="inline"
           variant="h5"
@@ -30,18 +33,18 @@ const SalesTipsWidget = () => {
             fontWeight: 700,
             fontSize: "18px",
             lineHeight: "28px",
-            mb: 2,
+            // mb: 2,
           }}
         >
           Porady sprzedażowe
           <div className="tooltip">
-          <img
-            className="w-[18px] relative h-[18px] pl-2"
-            alt=""
-            src="feathericon--alertcircle.svg"
-          />
-          <span className="tooltiptext">
-            Porady dotyczące poprawy sprzedaży wraz ze stratią tygodnia
+            <img
+              className="w-[18px] relative h-[18px] pl-2"
+              alt=""
+              src="feathericon--alertcircle.svg"
+            />
+            <span className="tooltiptext">
+              Porady dotyczące poprawy sprzedaży wraz ze strategią tygodnia
             </span>
           </div>
         </Typography>
@@ -51,28 +54,27 @@ const SalesTipsWidget = () => {
             flexDirection: "column",
             alignItems: "center",
             justifyContent: "center",
-            marginTop: "20px",
+            // marginTop: "20px",
           }}
         >
           <Typography
-            variant="h6"
             component="div"
             sx={{
               ...textStyle,
-              fontWeight: "bold",
-              marginTop: "15px",
+              fontWeight: "600",
               marginBottom: "10px",
               color: "#FBBC05",
+              fontSize: "14px",
+              lineHeight: "22px",
             }}
           >
             Strategia tygodnia:
           </Typography>
           <Tip tip="Personalizacja komunikacji z klientem" main={true} />
-          <div style={{ marginTop: "10px" }}>
-            <Tip tip="Zbieranie danych o klientach" main={false} />
-            <Tip tip="Segmentacja klientów" />
-            <Tip tip="Spersonalizowane treści" />
-          </div>
+          <br />
+          <Tip tip="Zbieranie danych o klientach" main={false} />
+          <Tip tip="Segmentacja klientów" />
+          <Tip tip="Spersonalizowane treści" />
         </div>
       </CardContent>
     </Card>
