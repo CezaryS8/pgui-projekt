@@ -1,5 +1,6 @@
 import React from "react";
 import { Grid, Paper } from "@mui/material";
+import Card from "@mui/material/Card";
 
 import OrdersWidget from "../../../components/OrdersWidget/OrdersWidget";
 import Sidebar from "../../../components/Sidebar/Sidebar";
@@ -22,9 +23,11 @@ const Dashboard = () => {
     <div className="flex">
       <Sidebar />
       <div style={{ width: "100%" }}>
-        <Box m="2px">
+        <Box backgroundColor="black">
           {/* HEADER */}
-          <Navbar />
+          <Box gridColumn="span 12" gridRow="span 1">
+            <Navbar />
+          </Box>
 
           {/* GRID & CHARTS */}
           <Box
@@ -32,6 +35,8 @@ const Dashboard = () => {
             gridTemplateColumns="repeat(12, 1fr)"
             gridAutoRows="94px"
             gap="2px"
+            p="2px"
+            backgroundColor="#D0D1D2"
           >
             {/* ROW 1 */}
             <Box
@@ -77,7 +82,7 @@ const Dashboard = () => {
                 display="flex"
                 alignItems="center"
                 justifyContent="center"
-                borderBottom="2px solid #FFF"
+                borderBottom="2px solid black"
               >
                 <SalesChartWidget />
               </Box>

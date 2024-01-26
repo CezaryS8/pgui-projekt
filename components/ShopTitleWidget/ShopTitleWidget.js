@@ -21,6 +21,7 @@ const ShopTitleWidget = () => {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
+        borderRadius: "0px",
       }}
     >
       <CardContent sx={{ display: "flex", alignItems: "center" }}>

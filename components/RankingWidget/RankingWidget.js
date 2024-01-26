@@ -20,7 +20,7 @@ const RankingWidget = () => {
   const [selectedCategory, setSelectedCategory] = React.useState(most);
 
   return (
-    <Card sx={{ width: "100%", height: "100%" }}>
+    <Card sx={{ width: "100%", height: "100%", borderRadius: "0px" }}>
       <CardContent>
         <div
           style={{
