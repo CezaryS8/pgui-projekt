@@ -80,11 +80,12 @@ export default function CustomCard() {
             mb: 2,
           }}
         >
-          Zamówienia
+          Jakość sprzedaży
           <img
             className="w-[18px] relative h-[18px] pl-2"
             alt=""
             src="feathericon--alertcircle.svg"
+            title="Ocena sprzedaży biorąca pod uwagę różne aspekty."
           />
         </Typography>
 
