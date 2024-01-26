@@ -1,6 +1,7 @@
 import React from "react";
 import { SearchIcon } from "@heroicons/react/solid";
 import Card from "@mui/material/Card";
+import UserMenu from "./UserMenu";
 
 const Navbar = () => {
   return (
@@ -18,13 +19,14 @@ const Navbar = () => {
         </div>
         <div className="flex flex-row items-center gap-x-2.5">
           <h3 className="col-span-12">Cezary Szade</h3>
-          <div className="w-10 h-10 px-4">
+          {/* <div className="w-10 h-10 px-4">
             <img
               className="rounded-2xl h-full"
               src="rectangle-6@2x.png"
               alt="Cezary Szade"
             />
-          </div>
+          </div> */}
+          <UserMenu />
           <span>
             <div className="bold"></div>PL / EN
           </span>

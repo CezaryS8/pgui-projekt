@@ -15,9 +15,9 @@ const Dashboard = () => {
     <div className="flex">
       <Sidebar />
       <div style={{ width: "100%" }}>
-        <Box backgroundColor="black">
+        <Box backgroundColor="#D0D1D2">
           {/* HEADER */}
-          <Box gridColumn="span 12" gridRow="span 1">
+          <Box gridColumn="span 12" gridRow="span 1" px="2px">
             <Navbar />
           </Box>
 
@@ -74,7 +74,7 @@ const Dashboard = () => {
                 display="flex"
                 alignItems="center"
                 justifyContent="center"
-                borderBottom="2px solid black"
+                borderBottom="2px solid #D0D1D2"
               >
                 <SalesChartWidget />
               </Box>
