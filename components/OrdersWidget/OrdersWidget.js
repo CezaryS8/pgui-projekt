@@ -37,11 +37,16 @@ const OrdersWidget = () => {
           }}
         >
           Zamówienia
+          <div className="tooltip">
           <img
             className="w-[18px] relative h-[18px] pl-2"
             alt=""
             src="feathericon--alertcircle.svg"
           />
+          <span className="tooltiptext">
+            Podsumowanie liczby zamówień z podziałem na statusy
+            </span>
+          </div>
         </Typography>
 
         <OrderItem label="Nieopłacone" value="63" />

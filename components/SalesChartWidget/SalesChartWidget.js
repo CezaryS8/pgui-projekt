@@ -70,11 +70,16 @@ const SalesChartWidget = () => {
           }}
         >
           Wykres sprzedaży
+          <div className="tooltip">
           <img
             className="w-[18px] relative h-[18px] pl-2"
             alt=""
             src="feathericon--alertcircle.svg"
           />
+          <span className="tooltiptext">
+            Wykres sprzedaży w ostatnim tygodniu z podziałem na obrót oraz liczbę sprzedanych sztuk
+            </span>
+          </div>
         </Typography>
         <Grid spacing={2} display="inline">
           <Grid item xs={4} display="inline" pl={2}>
