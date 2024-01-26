@@ -38,6 +38,37 @@ const data = [
   },
 ];
 
+const data2 = [
+  {
+    name: "pon",
+    uv: 19220,
+  },
+  {
+    name: "wt",
+    uv: 16110,
+  },
+  {
+    name: "śr",
+    uv: 14480,
+  },
+  {
+    name: "czw",
+    uv: 2301,
+  },
+  {
+    name: "pt",
+    uv: 22023,
+  },
+  {
+    name: "sob",
+    uv: 20002,
+  },
+  {
+    name: "nd",
+    uv: 18000,
+  },
+]
+
 const SalesChartWidget = () => {
   const textStyle = {
     fontFamily: "Poppins",
@@ -49,6 +80,11 @@ const SalesChartWidget = () => {
   };
 
   const minValue = Math.min(...data.map((item) => item.uv));
+  
+  const obrot = "obrot";
+  const liczbaSztuk = "liczbaSztuk";
+  
+  const [selectedCategory, setSelectedCategory] = React.useState(obrot);
 
   return (
     <Card sx={{ width: "100%", height: "100%", borderRadius: "0px" }}>
@@ -78,11 +114,11 @@ const SalesChartWidget = () => {
           </div>
         </Typography>
         <Grid spacing={2} display="inline">
-          <Grid item xs={4} display="inline" pl={2}>
-            <CategorySelector isSelected={true}>Obrót</CategorySelector>
+          <Grid item xs={4} display="inline" pl={2} onClick={() => setSelectedCategory(obrot)}>
+            <CategorySelector isSelected={selectedCategory === obrot}>Obrót</CategorySelector>
           </Grid>
-          <Grid item xs={4} display="inline" pl={2}>
-            <CategorySelector isSelected={false}>
+          <Grid item xs={4} display="inline" pl={2} onClick={() => setSelectedCategory(liczbaSztuk)}>
+            <CategorySelector isSelected={selectedCategory === liczbaSztuk}>
               Liczba sprzedanych sztuk
             </CategorySelector>
           </Grid>
@@ -91,7 +127,7 @@ const SalesChartWidget = () => {
         <LineChart
           width={1150}
           height={300}
-          data={data}
+          data={selectedCategory === 'obrot' ? data : data2}
           margin={{
             top: 30,
             right: 0,
