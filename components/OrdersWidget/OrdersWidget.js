@@ -15,7 +15,9 @@ const OrdersWidget = () => {
   };
 
   const OrderItem = ({ label, value }) => (
-    <Box sx={{ display: "flex", justifyContent: "space-between", mt: 2 }}>
+    <Box
+      sx={{ display: "flex", justifyContent: "space-between", mt: 2, mr: 20 }}
+    >
       <Typography sx={textStyle}>{label}</Typography>
       <Typography sx={textStyle}>{value}</Typography>
     </Box>
