@@ -47,11 +47,16 @@ const ReviewsWidget = () => {
             }}
           >
             Opinie kupujących
+            <div className="tooltip">
             <img
               className="w-[18px] relative h-[18px] pl-2"
               alt=""
               src="feathericon--alertcircle.svg"
             />
+            <span className="tooltiptext">
+              Lista 5 ostatnich opinii kupujących z podziałem na kategorie
+              </span>
+            </div>
           </Typography>
           <Grid spacing={2} display="inline">
             <Grid

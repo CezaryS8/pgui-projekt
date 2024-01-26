@@ -34,11 +34,16 @@ const SalesTipsWidget = () => {
           }}
         >
           Porady sprzedażowe
+          <div className="tooltip">
           <img
             className="w-[18px] relative h-[18px] pl-2"
             alt=""
             src="feathericon--alertcircle.svg"
           />
+          <span className="tooltiptext">
+            Porady dotyczące poprawy sprzedaży wraz ze stratią tygodnia
+            </span>
+          </div>
         </Typography>
         <div
           style={{

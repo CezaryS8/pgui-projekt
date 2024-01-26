@@ -80,12 +80,14 @@ export default function CustomCard() {
             mb: 2,
           }}
         >
-          Zamówienia
-          <img
-            className="w-[18px] relative h-[18px] pl-2"
-            alt=""
-            src="feathericon--alertcircle.svg"
-          />
+          Jakość sprzedaży
+          <div className="tooltip">
+            <img
+              className="w-[18px] relative h-[18px] pl-2 tooltip"
+              alt=""
+              src="feathericon--alertcircle.svg"
+            /><span className="tooltiptext">Ocena sprzedaży biorąca pod uwagę różne aspekty</span>
+          </div>
         </Typography>
 
         <ScoreTypography variant="h1" component="div">
