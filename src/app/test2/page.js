@@ -15,6 +15,7 @@ import SalesChartWidget from "../../../components/SalesChartWidget/SalesChartWid
 import { Box, Button, IconButton, Typography, useTheme } from "@mui/material";
 import RankingWidget from "../../../components/RankingWidget/RankingWidget";
 import SalesTipsWidget from "../../../components/SalesTipsWidget/SalesTipsWidget";
+import ShopTitleWidget from "../../../components/ShopTitleWidget/ShopTitleWidget";
 
 const Dashboard = () => {
   return (
@@ -41,7 +42,7 @@ const Dashboard = () => {
               alignItems="center"
               justifyContent="center"
             >
-              1a
+              <ShopTitleWidget />
             </Box>
             <Box
               gridColumn="span 3"

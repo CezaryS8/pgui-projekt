@@ -1,5 +1,5 @@
 import React from "react";
-import { SearchIcon, GlobeAltIcon } from "@heroicons/react/solid";
+import { SearchIcon } from "@heroicons/react/solid";
 
 const Navbar = () => {
   return (
@@ -21,7 +21,11 @@ const Navbar = () => {
           <div className="bold"></div>PL / EN
         </span>
 
-        <GlobeAltIcon className="h-5 w-5 text-gray-600 p-4" />
+        <img
+          className="h-5 w-5 text-gray-600 p-4 pr-8"
+          alt=""
+          src="feathericon--moon.svg"
+        />
       </div>
     </div>
   );
