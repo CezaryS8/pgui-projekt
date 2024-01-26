@@ -5,20 +5,12 @@ import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import CategorySelector from "../commons/CategorySelector";
 import Grid from "@mui/material/Grid";
-import {
-  LineChart,
-  Line,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  Legend,
-} from "recharts";
+import { LineChart, Line, XAxis, YAxis, Tooltip } from "recharts";
 
 const data = [
   {
     name: "pon",
-    uv: 150,
+    uv: 190,
   },
   {
     name: "wt",
@@ -55,6 +47,9 @@ const SalesChartWidget = () => {
     letterSpacing: "0px",
     textAlign: "left",
   };
+
+  const minValue = Math.min(...data.map((item) => item.uv));
+
   return (
     <Card sx={{ width: "100%", height: "100%", borderRadius: "0px" }}>
       <CardContent>
@@ -71,13 +66,14 @@ const SalesChartWidget = () => {
         >
           Wykres sprzedaży
           <div className="tooltip">
-          <img
-            className="w-[18px] relative h-[18px] pl-2"
-            alt=""
-            src="feathericon--alertcircle.svg"
-          />
-          <span className="tooltiptext">
-            Wykres sprzedaży w ostatnim tygodniu z podziałem na obrót oraz liczbę sprzedanych sztuk
+            <img
+              className="w-[18px] relative h-[18px] pl-2"
+              alt=""
+              src="feathericon--alertcircle.svg"
+            />
+            <span className="tooltiptext">
+              Wykres sprzedaży w ostatnim tygodniu z podziałem na obrót oraz
+              liczbę sprzedanych sztuk
             </span>
           </div>
         </Typography>
@@ -104,7 +100,7 @@ const SalesChartWidget = () => {
           }}
         >
           <XAxis dataKey="name" />
-          <YAxis />
+          <YAxis domain={[minValue - minValue / 20, "auto"]} />
           <Tooltip />
           <Line type="monotone" dataKey="uv" stroke="#8884d8" strokeWidth={2} />
         </LineChart>

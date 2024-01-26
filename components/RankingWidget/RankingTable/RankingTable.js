@@ -29,7 +29,7 @@ const RankingTable = ({ category }) => {
     <tbody>
       {orders.map((order, index) => (
         <tr key={index} style={textStyle}>
-          <td>
+          <td style={textStyle}>
             <Order
               name={order.name}
               fontWeight={index === 0 ? "bold" : "normal"}
