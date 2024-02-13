@@ -9,7 +9,8 @@ npm run dev
 
 ## Based on figma project
 
-![image](https://github.com/WojciechSzade/pgui-projekt/assets/46067911/a41aef64-4498-4bdf-95d9-aa474d628bfa)
+![light (2)](https://github.com/CezaryS8/pgui-projekt/assets/46067911/2be95236-5985-482f-bc93-a079672b6a80)
+
 
 ## Authors
 https://github.com/CezaryS8 <br>
